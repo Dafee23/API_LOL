@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Campeones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Lista de Campeones</h1>
+  </header>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Buscar por nombre del campeón">
+    <select id="roleSelector">
+      <option value="">Seleccionar Rol</option>
+      <option value="Assassin">Asesino</option>
+      <option value="Fighter">Luchador</option>
+      <option value="Mage">Mago</option>
+      <option value="Marksman">Tirador</option>
+      <option value="Support">Soporte</option>
+      <option value="Tank">Tanque</option>
+    </select>
+    <select id="resourceSelector">
+      <option value="">Seleccionar Tipo de Recurso</option>
+      <option value="Mana">Mana</option>
+      <option value="Energy">Energía</option>
+      <option value="Fury">Furia</option>
+      <option value="Rage">Ira</option>
+    </select>
+    <button onclick="searchChampions(),searchByResource(),searchByRole()">Buscar</button>
+    <button onclick="fetchData()">Cargar Campeones</button>
+  </div>
+  <div class="champion-container" id="championsContainer"></div>
+  <div class="pagination" id="paginationContainer"></div>
+  <script src="script.js"></script>
+</body>
+</html>
